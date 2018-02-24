@@ -1,0 +1,8 @@
+prefix=/home/anipal/sim8/devel
+
+Name: nbot
+Description: Description of nbot
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/anipal/sim8/devel/lib 
+Requires: 

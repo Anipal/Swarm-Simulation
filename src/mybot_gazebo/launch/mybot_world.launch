@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <arg name="world" default="empty"/> 
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+  
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find mybot_gazebo)/worlds/mybot.world"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="headless" value="$(arg headless)"/>
+    <arg name="debug" value="$(arg debug)"/>
+  </include>
+
+  
+<!--CONVERTING XACRO AND PUTTING IT ON THE PARAMETER SERVER -->
+  <!--<param name="robot_description" command="$(find xacro)/xacro.py '$(find mybot_description)/urdf/mybot.xacro'"/>-->
+
+  <param name="cylinder" command="$(find xacro)/xacro.py '$(find mybot_description)/urdf/cylinder.xacro'"/>
+  <!--
+  <node name="s1" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 4 -y 4 -param cylinder -model s1" />
+
+  <node name="s2" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 4 -y 1 -param cylinder -model s2" />
+
+  <node name="s3" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 7 -y 2 -param cylinder -model s3" />
+  
+  <node name="s4" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 7 -y 3 -param cylinder -model s4" />
+
+   <node name="s5" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 5 -y 1 -param cylinder -model s5"  />
+
+   <node name="s6" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 4 -y 6 -param cylinder -model s6" />
+
+    <node name="s7" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 3 -y 5.5 -param cylinder -model s7" />-->
+   
+   <!--
+   <node name="s1" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 1.5 -y 6 -param cylinder -model s1" />
+   <node name="s2" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 3.7 -y 5 -param cylinder -model s2" />
+   <node name="s3" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 3 -y 3 -param cylinder -model s3" />
+   <node name="s4" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 3.75 -y 0 -param cylinder -model s4" />
+   <node name="s5" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 4 -y 2 -param cylinder -model s5"  />
+   <node name="s6" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 4 -y 0.25 -param cylinder -model s6" />
+   <node name="s7" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 2 -y 1 -param cylinder -model s7" />
+   -->
+   
+   
+   <node name="s1" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 1 -y 6 -param cylinder -model s1" />
+   <node name="s2" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 3 -y 5 -param cylinder -model s2" />
+   <node name="s3" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 3 -y 3 -param cylinder -model s3" />
+   <node name="s4" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 4 -y 0 -param cylinder -model s4" />
+   <node name="s5" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 4 -y 1 -param cylinder -model s5"  />
+   <node name="s6" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 4 -y 0.25 -param cylinder -model s6" />
+   <node name="s7" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 0 -y 1 -param cylinder -model s7" />
+   
+   <!--
+   <node name="s1" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 1 -y 6 -param cylinder -model s1" />
+   <node name="s2" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 3 -y 5 -param cylinder -model s2" />
+   <node name="s3" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 3 -y 3 -param cylinder -model s3" />
+   <node name="s4" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 4 -y 0 -param cylinder -model s4" />
+   <node name="s5" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 5 -y 1 -param cylinder -model s5"  />
+   <node name="s6" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 4 -y 3 -param cylinder -model s6" />
+   <node name="s7" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 0 -y 1 -param cylinder -model s7" />-->
+   <!--
+   <node name="s1" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 1 -y 5 -param cylinder -model s1" />
+   <node name="s2" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 5 -y 5 -param cylinder -model s2" />
+   <node name="s3" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 2 -y 3 -param cylinder -model s3" />
+   <node name="s4" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 6 -y 0 -param cylinder -model s4" />
+   <node name="s5" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 5 -y 1 -param cylinder -model s5"  />
+   <node name="s6" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 4 -y 3 -param cylinder -model s6" />
+   <node name="s7" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 3 -y 1 -param cylinder -model s7" />-->
+   <!--
+   <node name="s1" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 1 -y 8 -param cylinder -model s1" />
+   <node name="s2" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 5 -y 2 -param cylinder -model s2" />
+   <node name="s3" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 2 -y 6 -param cylinder -model s3" />
+   <node name="s4" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 6 -y 4 -param cylinder -model s4" />
+   <node name="s5" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 5 -y 1 -param cylinder -model s5"  />
+   <node name="s6" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 4 -y 3 -param cylinder -model s6" />
+   <node name="s7" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 3 -y 1 -param cylinder -model s7" />-->
+
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find mybot_description)/urdf/mybot.xacro'"/>  
+
+  <group ns="m1">
+  <node name="mybot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 6 -y 0 -param /robot_description -model m1" >
+  </node>
+
+  <node name="laserT" pkg="nbot" type="laserTime.py" output="screen" respawn="true"></node>	
+  </group>
+
+  
+  <group ns="m2">
+  <node name="mybot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 0 -y 0 -param /robot_description -model m2" >
+  </node>	
+  <node name="laserT" pkg="nbot" type="laserTime.py" output="screen" respawn="true"></node>	
+  </group>
+ 
+  <group ns="m3">
+  <node name="mybot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 0 -y 6 -param /robot_description -model m3" >
+  </node>	
+  <node name="laserT" pkg="nbot" type="laserTime.py" output="screen" respawn="true"></node>	
+  </group>
+
+  
+  <group ns="m4">
+  <node name="mybot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -x 6 -y 6 -param /robot_description -model m4" >
+  </node>	
+  <node name="laserT" pkg="nbot" type="laserTime.py" output="screen" respawn="true"></node>	
+  </group>
+   
+
+   <!--<node name="InitBalls" pkg="nbot" type="InitBalls.py"></node>-->
+
+
+
+  <!--
+ <node name="mybot_spawn2" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -y 1 -param robot_description -model mybot2" />	
+  -->
+
+ 
+  
+
+   <!---->
+
+</launch>

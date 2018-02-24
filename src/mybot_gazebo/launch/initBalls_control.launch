@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+
+  <node name="m1" pkg="nbot" type="myscr43.py" args=" m1 "/>
+
+  <node name="m2" pkg="nbot" type="myscr43.py" args=" m2 "/>
+ 
+  <node name="m3" pkg="nbot" type="myscr43.py" args=" m3 "/>
+
+  <node name="m4" pkg="nbot" type="myscr43.py" args=" m4 "/> 
+
+</launch>

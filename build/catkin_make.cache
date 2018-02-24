@@ -1,0 +1,2 @@
+mybot_description:mybot_gazebo:nbot
+-DCATKIN_DEVEL_PREFIX=/home/anipal/sim8/devel -DCMAKE_INSTALL_PREFIX=/home/anipal/sim8/install -G Unix Makefiles
